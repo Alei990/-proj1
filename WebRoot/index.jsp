@@ -16,18 +16,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" href="./CSS/Login/login.css" type="text/css"/>
 	
 	<script type="text/javascript" src="./JS/check.js"></script>
+	
 
 	<!-- display -->
 	<link rel="stylesheet" href="./CSS/Login/display-style.css" type="text/css" /> 
 	
 	<script type="text/javascript" src="./JS/jquery.min.js"></script>
-	<script type="text/javascript" src="./JS/coinslider.min.js"></script> 
+	<script type="text/javascript" src="./JS/coinslider.min.js"></script>
 	<!-- display -->
 	
 	<!-- background -->
 	<link rel="stylesheet" href="./CSS/Login/background-style.css" type="text/css" />
 	
 	<script type="text/javascript" src="./JS/jquery.mkinfinite.js"></script>
+	<script type="text/javascript" src="error.js"></script>
 	<!-- background -->
 	
 	<script type="text/javascript">
@@ -64,7 +66,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
 <body class="htmleaf-header">
 
-
 <!-- <header class="htmleaf-header"> -->
 	<div class="header">
 		计算机科学与工程学院教师考核系统
@@ -95,7 +96,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			密码:<input type="password" name="password" class="input_password"><br/>
 			验证码:<input type="text" name="checkcode" class="inpue_checkcode">
 			<span class="add phoKey" id="ss" onclick="create_code()"></span>
-			<input id="test" type="hidden" name="test"><br/> 
+			<input id="test" type="hidden" name="test">
+			<br/> 
 			<input class="login_button" type="submit" value="登录">
 			<a href="#" class="forgoten_link" href="">忘记密码</a>
 			</form> 
@@ -105,3 +107,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 </body>
 </html>
+<script>
+$(document).ready(function error(){
+	var errori ='<%=request.getParameter("error")%>';
+	if(errori==1){
+		alert("验证码不能为空！！");
+	}
+	else if(errori==2){
+		alert("验证码错误！！");
+	}
+	else if(errori==3){
+		alert("用户名不能为空！！");
+	}
+	else if(errori==4){
+		alert("密码不能为空！！");
+	}
+	else if(errori==5){
+		alert("账号密码错误！！");
+	}
+});
+</script>
