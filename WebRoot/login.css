@@ -1,19 +1,4 @@
-	body{
-		margin:0;
-		background-image:url("background1.jpeg");
-		background-repeat:No-repeat;
-		background-size:100%;
-	}
-	.header {
-		margin:0px;
-		padding-top:10px;
-		border-bottom: 1px solid #e2e2e2;
-		height:35px;
-		position: relative;
-		background-color:#6E7173;
-		text-align:left;
-		font-size:20px;x
-	}
+
 	.login_block{
 		position:absolute;
 		left:50%;
@@ -25,9 +10,11 @@
 		font-size:20px;
 		padding:20px;
 		border-radius:5px;
+		//kjhgfdfghjkl
 		box-shadow:-10px 10px 10px #888888;
 	}
 	.login_form{
+		//njhgfde456
 		position:relative;
 		margin-top:3px;
 		height:145px;
